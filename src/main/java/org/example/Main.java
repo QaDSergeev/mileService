@@ -4,18 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int bonus;
+
         BonusMilesService service = new BonusMilesService();
+        bonus = service.calculate(10_000);
+        System.out.println("Начислено бонусов: " + bonus);
 
-        service.setTicketPrice(10_000);
-        service.calculate();
-        service.printBonusCount();
-
-        service.setTicketPrice(5_000);
-        service.calculate();
-        service.printBonusCount();
-
-        service.addTicketPrice(20_000);
-        service.calculate();
-        service.printBonusCount();
+        bonus = service.calculate(20_000);
+        System.out.println("Начислено бонусов: " + bonus);
     }
 }
